@@ -8,7 +8,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.junus.meinersteapp"
+        applicationId 'de.cmg.mytodo'
         minSdk 23
         targetSdk 35
         versionCode 1
