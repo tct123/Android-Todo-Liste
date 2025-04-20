@@ -1,4 +1,4 @@
-package com.junus.meinersteapp
+package com.junus.mytodo
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -10,7 +10,7 @@ import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.junus.meinersteapp.databinding.ActivityMainBinding
+import com.junus.mytodo.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -64,8 +64,5 @@ class MainActivity : AppCompatActivity() {
 
             builder.show()
         }
-
-
-
     }
 }

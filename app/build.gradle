@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.junus.meinersteapp'
+    namespace 'com.junus.mytodo'
     compileSdk 35
 
     defaultConfig {
@@ -45,6 +45,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.8.9'
     implementation 'androidx.navigation:navigation-ui-ktx:2.8.9'
+    implementation 'androidx.compose.material3:material3:1.3.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'

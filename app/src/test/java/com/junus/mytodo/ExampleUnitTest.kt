@@ -1,4 +1,4 @@
-package com.junus.meinersteapp
+package com.junus.mytodo
 
 import org.junit.jupiter.api.Test
 
