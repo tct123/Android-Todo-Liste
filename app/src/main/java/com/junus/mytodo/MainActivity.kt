@@ -10,6 +10,9 @@ import android.widget.ListView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.junus.mytodo.databinding.ActivityMainBinding
 
@@ -24,11 +27,20 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(
+                left = insets.left,
+                top = insets.top,
+                right = insets.right
+            )
+            WindowInsetsCompat.CONSUMED
+        }
+        // ENDE: Code für die Safe Area
         lvTodoList = findViewById(R.id.lvTodoList)
         fab = findViewById(R.id.floatingActionButton)
         shoppingItems = ArrayList()
